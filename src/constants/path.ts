@@ -1,12 +1,13 @@
 const LANDING_PAGE = "/";
 const LOGIN = "/login";
 
-const PRIVATE = "/private";
+//private Route
+const DASHBOARD = "/dashboard";
+const LOL = "/dashboard/lol";
 
 const PUBLIC = "/public";
-const LOL = "/private/lol";
 
-const PRIVATE_ROUTES = [PRIVATE, LOL];
+const PRIVATE_ROUTES = [DASHBOARD, LOL];
 const AUTH_ROUTES = [LOGIN];
 const PUBLIC_ROUTES = [LANDING_PAGE, PUBLIC];
 
@@ -16,5 +17,5 @@ export {
   PUBLIC_ROUTES,
   LANDING_PAGE,
   LOGIN,
-  PRIVATE,
+  DASHBOARD,
 };

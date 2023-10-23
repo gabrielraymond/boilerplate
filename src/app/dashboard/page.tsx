@@ -4,7 +4,7 @@ import withAuth from "@/components/auth/withAuth";
 import UserList from "./userlist";
 import Counter from "./count";
 
-const Private = () => {
+const Dashboard = () => {
   // const cookieStore = cookies();
   // const token = cookieStore.get("token");
   // if (!token) {
@@ -26,4 +26,4 @@ const Private = () => {
   );
 };
 
-export default Private;
+export default Dashboard;

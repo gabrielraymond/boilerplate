@@ -4,7 +4,7 @@ import {
   CheckIsPrivateRoute,
   CheckIsPublicRoute,
 } from "./utils/route";
-import { LOGIN, PRIVATE } from "./constants/path";
+import { LOGIN, DASHBOARD } from "./constants/path";
 
 export default function authMiddleware(req: any) {
   let token = req.cookies.get("token");
@@ -18,7 +18,7 @@ export default function authMiddleware(req: any) {
   }
 
   if (token && CheckIsAuthRoute(req.nextUrl.pathname)) {
-    const absoluteURL = new URL(PRIVATE, req.nextUrl.origin);
+    const absoluteURL = new URL(DASHBOARD, req.nextUrl.origin);
     return NextResponse.redirect(absoluteURL.toString());
   }
 

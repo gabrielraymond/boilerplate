@@ -2,6 +2,7 @@
 import Button from "@/components/button/button";
 import Input from "@/components/form/input/input";
 import InputPassword from "@/components/form/input/inputPassword";
+import { DASHBOARD } from "@/constants/path";
 import { useApiLoginStore } from "@/store/login";
 import Link from "next/link";
 import { redirect } from "next/navigation";
@@ -38,7 +39,7 @@ const FormLogin = () => {
   useEffect(() => {
     console.log(isSuccess);
     if (isSuccess) {
-      redirect("/private");
+      redirect(DASHBOARD);
     }
   }, [isSuccess]);
 

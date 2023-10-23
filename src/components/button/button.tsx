@@ -1,43 +1,47 @@
 import React from "react";
 
 interface Props {
+  style: "primary" | "outlined" | "secondary";
+  size: "large" | "regular" | "small";
+  state: "regular" | "hover" | "active" | "disabled";
   label: string;
-  size?: string;
-  styleType?: string;
-  disabled?: boolean;
   onClick?: () => void;
-  icon?: React.ReactNode;
 }
 
-const Button = ({
-  label,
-  size = "large",
-  styleType = "primary",
-  disabled = false,
-  icon,
-  onClick,
-}: Props) => {
-  const buttonSize = `${
-    size === "large"
-      ? "px-[30px] py-[15px]"
-      : size === "medium"
-      ? "px-5 py-2.5"
-      : "px-2.5 py-[5px]"
-  }`;
+const Button = ({ style, size, state, label, onClick }: Props) => {
+  const getButtonClasses = () => {
+    const commonClasses = "rounded-lg transition-all ease-in duration-150";
+    const sizeClasses = {
+      large: "text-lg px-[30px] py-[15px]",
+      regular: "text-base px-5 py-2.5",
+      small: "text-sm px-2.5 py-[5px]",
+    };
+    const styleClasses = {
+      primary: "bg-sweden-100 text-sweden-500 hover:bg-blue-600 active:bg-blue-400 ",
+      outlined: "border border-sweden-100 hover:border-gray-500 text-sweden-100",
+      secondary:
+        "bg-sweden-300 text-sweden-800 hover:bg-gray-400 active:bg-gray-200",
+    };
+    const stateClasses = {
+      regular: "",
+      hover: "hover:scale-105 hover:shadow-md",
+      active: "active:scale-95 active:shadow-sm",
+      disabled: "opacity-50 cursor-not-allowed",
+    };
 
-  const buttonStyle = `rounded-lg  ${
-    styleType === "primary"
-      ? "text-lightColor bg-secondary hover:opacity-80 active:from-portage-700 active:via-portage-300 active:to-portage-600"
-      : styleType === 'delete' ? "bg-red-500 hover:bg-red-300 text-portage-50" : "text-portage-400 border-2 border-portage-400  hover:bg-portage-200 active:border-portage-500 active:text-portage-500"
-  }`;
+    const sizeClass = sizeClasses[size] || sizeClasses.regular;
+    const styleClass = styleClasses[style] || styleClasses.primary;
+    const stateClass = stateClasses[state] || stateClasses.regular;
+
+    return `${commonClasses} ${sizeClass} ${styleClass} ${stateClass}`;
+  };
 
   return (
     <button
-      className={buttonSize + " " + buttonStyle}
-      disabled={disabled}
+      className={getButtonClasses()}
+      disabled={state === "disabled"}
       onClick={onClick}
     >
-      {icon && <span>{icon}</span>}
       {label}
     </button>
   );

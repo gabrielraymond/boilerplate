@@ -1,3 +1,4 @@
+import { DASHBOARD } from "@/constants/path";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
@@ -17,7 +18,7 @@ const Breadcrumb = ({ icon }: PropsBreadcrumb) => {
       <div className="container mx-auto">
         <ol className="list-none p-0 flex">
           <li className="flex items-center">
-            <Link href={"/private"} className="text-sweden-900">
+            <Link href={DASHBOARD} className="text-sweden-900">
               {icon ? <FontAwesomeIcon icon={faHome} /> : "Home"}
             </Link>
           </li>

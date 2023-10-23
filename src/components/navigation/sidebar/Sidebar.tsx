@@ -47,13 +47,13 @@ const Sidebar = ({ minified, setMinified }: any) => {
     {
       key: "dashboard",
       title: "Dashboard",
-      url: "/private",
+      url: "/dashboard",
       icon: faThLarge,
     },
     {
       key: "kost",
       title: "Kost",
-      url: "/private/lol",
+      url: "/dashboard/property",
       icon: faHouse,
     },
     {
