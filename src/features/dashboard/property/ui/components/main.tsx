@@ -1,10 +1,11 @@
 import Button from "@/components/button/button";
+import FooterDashboard from "@/components/footer/FooterDashboard";
 import HeaderPage from "@/components/headerPage/HeaderPage";
 import React from "react";
 
 const Property = () => {
   return (
-    <div className="mx-4 my-4">
+    <div className="mx-4 my-4 min-h-[calc(100vh-120px)]">
       <HeaderPage
         title="Property"
         description="Lorem Ipsum..."
@@ -18,10 +19,7 @@ const Property = () => {
         }
       />
 
-      <Button label="Button" style="primary" size="large" state="regular" />
-      <Button label="Button" style="secondary" size="regular" state="active" />
-      <Button label="Button" style="outlined" size="regular" state="active" />
-      
+      <FooterDashboard />
     </div>
   );
 };
