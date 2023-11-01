@@ -51,8 +51,8 @@ const Sidebar = ({ minified, setMinified }: any) => {
       icon: faThLarge,
     },
     {
-      key: "kost",
-      title: "Kost",
+      key: "property",
+      title: "Property",
       url: "/dashboard/property",
       icon: faHouse,
     },

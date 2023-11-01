@@ -17,10 +17,10 @@ const Button = ({ style, size, state, label, onClick }: Props) => {
       small: "text-sm px-2.5 py-[5px]",
     };
     const styleClasses = {
-      primary: "bg-sweden-100 text-sweden-500 hover:bg-blue-600 active:bg-blue-400 ",
-      outlined: "border border-sweden-100 hover:border-gray-500 text-sweden-100",
+      primary: "bg-sweden-100 text-sweden-500 hover:opacity-80 active:bg-sweden-400 ",
+      outlined: "border border-sweden-100 hover:opacity-80 active:bg-blue-400 text-sweden-100",
       secondary:
-        "bg-sweden-300 text-sweden-800 hover:bg-gray-400 active:bg-gray-200",
+        "bg-sweden-300 text-sweden-800 hover:opacity-80 active:bg-gray-200",
     };
     const stateClasses = {
       regular: "",

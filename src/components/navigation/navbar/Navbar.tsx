@@ -19,8 +19,9 @@ const Navbar = () => {
       </div>
       <div>
         <Button
-          styleType="primary"
-          size="medium"
+          state="regular"
+          style="primary"
+          size="regular"
           onClick={() => {
             router.push("/login");
           }}

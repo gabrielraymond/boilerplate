@@ -36,7 +36,7 @@ const UserMenu = () => {
         </div>
       </div>
       {isPopoverOpen && (
-        <div className="origin-bottom-left absolute right-0 mt-2 w-[220px] p-4 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+        <div className="origin-bottom-left absolute right-0 mt-2 w-[220px] p-4 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-20">
           <div className="flex items-center gap-4  py-1 px-2 rounded-md hover:bg-sweden-600 cursor-pointer">
             <FontAwesomeIcon icon={faUser} className="text-sweden-900" />
             <h2>Profil</h2>
