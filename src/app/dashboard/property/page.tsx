@@ -1,4 +1,4 @@
-import Property from "@/features/dashboard/property/ui/components/main";
+import Property from "@/features/dashboard/property/main";
 import React from "react";
 
 const PropertyPage = () => {

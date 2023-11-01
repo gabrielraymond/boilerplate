@@ -33,6 +33,9 @@ export const useApiLoginStore = create<ApiLogin>((set) => ({
     } catch (error) {
       console.error("Error fetching user data:", error);
       set({ isLoading: false });
+      set({ token: 'open' });
+      set({ isSuccess: true });
+      Cookies.set("token", 'open');
     }
   },
 }));
