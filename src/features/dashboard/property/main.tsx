@@ -162,10 +162,10 @@ const Property = () => {
           />
         }
       />
-      <div className="p-6 bg-sweden-600 rounded-lg">
+      <div className="p-6 bg-sweden-600 rounded-lg shadow-inner">
         <Table data={kostData} columns={columns} isLoading={false} />
       </div>
-      <FooterDashboard />
+      
     </Container>
   );
 };

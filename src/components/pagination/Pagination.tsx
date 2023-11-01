@@ -85,7 +85,7 @@ const Pagination: React.FC<PaginationProps> = ({
 
       <nav className="flex justify-center my-4">
         <button
-          className={`px-3 py-1 rounded-lg mr-2 cursor-pointer hover:bg-portage-300 hover:text-portage-50 disabled:text-portage-200 disabled:bg-transparent disabled:cursor-no-drop`}
+          className={`px-3 py-1 rounded-lg mr-2 cursor-pointer hover:bg-sweden-100 hover:text-portage-50 disabled:text-portage-200 disabled:bg-transparent disabled:cursor-no-drop`}
           onClick={() => handlePrev()}
           disabled={isDisabledPrev}
         >
@@ -98,8 +98,8 @@ const Pagination: React.FC<PaginationProps> = ({
               <button
                 className={`${
                   currentPage === page
-                    ? "bg-portage-400 text-portage-50"
-                    : "bg-grey-200  text-grey-700 hover:bg-portage-300 hover:text-portage-50"
+                    ? "bg-sweden-400 text-portage-50"
+                    : "bg-grey-200  text-grey-700 hover:bg-sweden-100 hover:text-sweden-600"
                 } px-3 py-1 rounded-lg`}
                 onClick={() => handlePagination(page)}
               >
@@ -110,7 +110,7 @@ const Pagination: React.FC<PaginationProps> = ({
         </ul>
 
         <button
-          className={`px-3 py-1 rounded-lg ml-2 cursor-pointer hover:bg-portage-300 hover:text-portage-50 disabled:text-portage-200 disabled:bg-transparent disabled:cursor-no-drop`}
+          className={`px-3 py-1 rounded-lg ml-2 cursor-pointer hover:bg-sweden-100 hover:text-portage-50 disabled:text-portage-200 disabled:bg-transparent disabled:cursor-no-drop`}
           onClick={() => handleNext()}
           disabled={isDisabledNext}
         >

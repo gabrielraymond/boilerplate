@@ -8,6 +8,7 @@ import { headers } from "next/headers";
 import Sidebar from "@/components/navigation/sidebar/Sidebar";
 import Header from "@/components/navigation/header/Header";
 import Navigation from "./navigation";
+import FooterDashboard from "@/components/footer/FooterDashboard";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -36,6 +37,7 @@ export default function RootLayout({
             isPrivate={CheckIsPrivateRoute(activePath || "") ? true : false}
           />
           <div>{children}</div>
+          {CheckIsPrivateRoute(activePath || "") && <FooterDashboard />}
         </div>
       </body>
     </html>
