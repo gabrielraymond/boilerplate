@@ -27,18 +27,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-sweden-500 flex h-fit">
-        {/*  && <Navbar />} */}
+        <div className="w-full min-h-screen">{children}</div>
 
-        <div>
+        {/* <div>
           <Sidebar />
         </div>
         <div className="w-full min-h-screen">
           <Navigation
             isPrivate={CheckIsPrivateRoute(activePath || "") ? true : false}
           />
+          <Navbar />
           <div>{children}</div>
           {CheckIsPrivateRoute(activePath || "") && <FooterDashboard />}
-        </div>
+        </div> */}
       </body>
     </html>
   );

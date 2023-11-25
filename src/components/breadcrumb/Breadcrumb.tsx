@@ -1,3 +1,4 @@
+'use client'
 import { DASHBOARD } from "@/constants/path";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
